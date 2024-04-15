@@ -1,0 +1,67 @@
+/*  global Styles  */
+
+:root {
+  --clr-primary: #f36531;
+  --clr-primary-light: #fef0ea;
+  --clr-dark: #1b1f29;
+  --clr-lighter: #5f6269;
+  --clr-lighter-variant: #b5b8be;
+  --clr-lighter-variant-two: #dfe2e8;
+  --clr-success: #58b859;
+  --clr-blue: #0061f9;
+}
+
+/* font sizes */
+.fs-24 {
+  font-size: 24px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+
+/* color variants */
+.clr-dark {
+  color: var(--clr-dark);
+}
+.clr-light {
+  color: var(--clr-light);
+}
+.clr-lighter {
+  color: var(--clr-lighter);
+}
+.clr-lighter-variant-two {
+  color: var(--clr-lighter-variant-two);
+}
+.clr-blue {
+  color: var(--clr-blue);
+}
+
+/* Chats List global style */
+
+.users-chat-list .user-list-item .action-dropdown {
+  display: none;
+  background: #fff;
+  border-radius: 8px;
+}
+.users-chat-list .user-list-item:hover .action-dropdown {
+  display: block;
+  transition: 0.3s ease-in-out;
+}
+.users-chat-list .user-list-item:hover .action-dropdown a {
+  padding: 4px;
+}
+.users-chat-list .user-list-item:hover {
+  background: var(--clr-primary-light);
+}
+.users-chat-list .user-list-item:hover .clr-lighter {
+  color: var(--clr-dark);
+}
+.users-chat-list .user-list-item:hover .clr-light {
+  color: var(--clr-lighter);
+}
