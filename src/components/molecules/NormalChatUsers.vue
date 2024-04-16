@@ -1,7 +1,6 @@
 <script>
 import HeadingTwo from "../atoms/HeadingTwo.vue";
 import UserListItem from "./UserListItem.vue";
-import ImgOne from "../../assets/images/person.jpg";
 import ProfileImg from "../../assets/images/profile-img-3.png";
 import ProfileImgTwo from "../../assets/images/profile-img.png";
 import ProfileImgThree from "../../assets/images/profile-img-2.png";
@@ -33,6 +32,7 @@ export default {
       recepient="You: "
       :image="image"
       badgeNumber="2"
+      badgebg="#f36531"
       waitTime
       time="1hr"
       :online="false"
@@ -56,6 +56,8 @@ export default {
       :image="profileImg3"
       time="1hr"
       badgeDisplay="none"
+      badgePillbg="#0061F9"
+      badgePillContent="Exhibitor"
     />
     <UserListItem
       class="px-3"
@@ -87,6 +89,8 @@ export default {
       waitTime
       time="1hr"
       badgeDisplay="none"
+      badgePillContent="Speaker"
+      badgePillbg="#58B859"
     />
   </div>
 </template>

@@ -10,9 +10,7 @@ export default {
 <template>
   <div class="user-chatbox flex-grow-1">
     <ChatBoxHeader />
-
     <ChatBoxBody />
-
     <ChatBoxFooter />
   </div>
 </template>

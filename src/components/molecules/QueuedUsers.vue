@@ -27,6 +27,7 @@ export default {
       :image="imgOne"
       badgeDisplay=""
       :online="true"
+      badgebg="#f36531"
     />
     <UserListItem
       class="px-3"

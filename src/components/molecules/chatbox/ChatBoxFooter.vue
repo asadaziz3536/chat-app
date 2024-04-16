@@ -49,12 +49,8 @@ export default {
     // event callback
     onSelectEmoji(emoji) {
       console.log(emoji.i);
-
       this.SelectedEmoji = emoji.i;
-
       console.log("selected emoji", this.SelectedEmoji);
-      // this.$refs.textInput += this.SelectedEmoji;
-
       console.log("input reference", this.$refs.textInput.innerHTML);
       this.$refs.textInput.innerHTML += this.SelectedEmoji;
     },
@@ -208,6 +204,9 @@ textarea {
   border-left: 0px;
   border-bottom: 0;
   border-radius: 0px;
+  box-shadow: 0px -4px 8px 0px #00000014;
+}
+.user-chatbox-footer {
   box-shadow: 0px -4px 8px 0px #00000014;
 }
 .user-chatbox-footer .panel {

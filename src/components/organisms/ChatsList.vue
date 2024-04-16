@@ -13,7 +13,7 @@ export default {
 };
 </script>
 <template>
-  <div class="users-chat-list">
+  <div class="users-chat-list custom-scrollbar">
     <ChatsHeader />
     <QueuedUsers />
     <NormalChatUsers />

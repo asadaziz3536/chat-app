@@ -188,7 +188,6 @@ export default {
   border-radius: 0;
   background: transparent;
   color: #5f6269;
-  /* font-family: Avenir; */
   font-size: 14px;
   font-weight: 800;
   line-height: 20px;
@@ -207,6 +206,11 @@ export default {
 
 /* Media Queries  */
 
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .users-chat-list {
+    width: auto;
+  }
+}
 @media screen and (max-width: 991.98px) {
   .tabs-wrapper {
     flex-direction: column-reverse !important;

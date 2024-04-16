@@ -18,12 +18,9 @@ export default {
 
 <template>
   <Header />
-
   <div class="main-contain d-flex">
     <Tabs />
-
     <ChatBox />
-
     <UserDetails />
   </div>
 </template>

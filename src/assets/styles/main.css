@@ -1,5 +1,39 @@
 /*  global Styles  */
 
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/Avenir-Regular/Avenir-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/Avenir-Black.ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/Avenir-Book.ttf");
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/Avenir-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/Avenir-Heavy.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir/Avenir- Light.ttf");
+  font-weight: 300;
+}
+
 :root {
   --clr-primary: #f36531;
   --clr-primary-light: #fef0ea;
@@ -11,6 +45,19 @@
   --clr-blue: #0061f9;
 }
 
+body {
+  font-family: "Avenir";
+  font-weight: 400;
+}
+h1 {
+  font-weight: 800;
+}
+h2 {
+  font-weight: 800;
+}
+h3 {
+  font-weight: 800;
+}
 /* font sizes */
 .fs-24 {
   font-size: 24px;
@@ -64,4 +111,25 @@
 }
 .users-chat-list .user-list-item:hover .clr-light {
   color: var(--clr-lighter);
+}
+
+/* Scroll bar design  */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f17e;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #88888881;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.custom-scrollbar ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

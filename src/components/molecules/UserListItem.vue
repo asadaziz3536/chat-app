@@ -58,8 +58,16 @@ export default {
       type: String,
       default: "",
     },
+    badgePillbg: {
+      type: String,
+      default: "",
+    },
     online: {
       type: Boolean,
+      default: "",
+    },
+    badgePillContent: {
+      type: String,
       default: "",
     },
   },
@@ -76,6 +84,11 @@ export default {
     <div class="flex-grow-1">
       <div class="d-flex justify-content-between">
         <HeadingThree class="mb-0 fs-16 clr-dark fw-bolder" :name="name" />
+        <badge
+          :style="{ background: badgePillbg }"
+          class="badge badge-pill badge-primary"
+          :content="badgePillContent"
+        />
         <div>
           <Text
             :content="waitTime"
@@ -106,7 +119,8 @@ export default {
           width="16px"
           height="16px"
           font="8px"
-          padding="10px"
+          padding="4px 6px"
+          lh="8px"
           :bg="badgebg"
         />
         <ActionDropdown class="action-dropdown" />
@@ -135,5 +149,9 @@ export default {
 .queued-users .user-list-item .time {
   color: var(--clr-dark);
   font-weight: 800;
+}
+.badge-pill {
+  border-radius: 10px;
+  line-height: 1.1;
 }
 </style>

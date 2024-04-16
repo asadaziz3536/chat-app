@@ -46,10 +46,29 @@ export default {
         <CircledIconBtn :svg="heartSvg" />
       </div>
       <div class="d-flex right-btns gap-3">
-        <CircledIconBtn :svg="CallSvg" bg="transparent" />
-        <CircledIconBtn :svg="VidoeSvg" bg="transparent" />
+        <CircledIconBtn
+          :svg="CallSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Audio Call"
+        />
+        <CircledIconBtn
+          :svg="VidoeSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Video Call"
+        />
         <ActionDropdown padding="0" class="p-0" />
-        <CircledIconBtn @click="ShowHide" :svg="InfoSvg" bg="transparent" />
+        <CircledIconBtn
+          @click="ShowHide"
+          :svg="InfoSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Contact Details"
+        />
       </div>
     </div>
   </div>

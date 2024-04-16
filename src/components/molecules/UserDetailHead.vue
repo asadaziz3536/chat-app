@@ -35,8 +35,16 @@ export default {
 
       <div>
         <Text class="fw-semibold clr-dark" content="Sophie Okonedo" />
-        <Text class="d-block fs-12" content="Senior UX/UI Designer at Nexus" />
-        <Text class="d-block fs-12" content="Technology Group" />
+        <Text
+          class="d-block fs-12"
+          content="Senior UX/UI Designer at Nexus"
+          color="#667085"
+        />
+        <Text
+          class="d-block fs-12"
+          content="Technology Group"
+          color="#667085"
+        />
         <Rating />
       </div>
     </div>

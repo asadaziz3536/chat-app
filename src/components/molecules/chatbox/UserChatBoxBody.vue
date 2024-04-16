@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <div class="user-chatbox-body flex-grow-1 overflow-auto">
+  <div class="user-chatbox-body flex-grow-1 overflow-auto custom-scrollbar">
     <div class="chat-message-wrapper">
       <div class="d-flex">
         <AvatarImg />
@@ -37,15 +37,11 @@ export default {
         <div class="d-flex align-items-center">
           <div class="chat-message">
             <Paragraph
-              class="fs-16 mb-0 fw-medium"
+              class="fs-16 mb-0"
               bg="#DFE2E8"
               content="John contacted you with Sophie Okenodo"
             />
           </div>
-          <!-- <div class="d-flex action-btns">
-            <CircledIconBtn :svg="ShareSvg" bg="transparent" />
-            <ActionDropdown padding="0" class="p-0" />
-          </div> -->
         </div>
       </div>
     </div>
@@ -60,7 +56,7 @@ export default {
         <div class="d-flex align-items-center">
           <div class="chat-message">
             <Paragraph
-              class="fs-16 mb-0 fw-medium"
+              class="fs-16 mb-0"
               bg="#DFE2E8"
               content="Hi Alex! Have you heard about the upcoming 
         virtual UX design event next month?"
@@ -107,7 +103,7 @@ export default {
         <div class="d-flex align-items-center">
           <div class="chat-message">
             <Paragraph
-              class="fs-16 mb-0 fw-medium"
+              class="fs-16 mb-0"
               bg="#DFE2E8"
               content="Hey Samir! Are you going to the concert tomorrow night?"
             />
@@ -185,7 +181,7 @@ export default {
         <div class="d-flex align-items-center">
           <div class="chat-message">
             <Paragraph
-              class="fs-16 mb-0 fw-medium"
+              class="fs-16 mb-0"
               bg="#DFE2E8"
               content="“Hey Sophe! Yes I got tickets. Super Excited”"
             />
@@ -226,6 +222,7 @@ export default {
 }
 .chat-message p {
   line-height: 24px;
+  font-weight: 500;
 }
 .chat-message.response-msg {
   padding: 4px 12px 4px 12px;

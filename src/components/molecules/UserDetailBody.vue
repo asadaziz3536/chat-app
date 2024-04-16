@@ -179,4 +179,7 @@ export default {
   background: none;
   color: var(--clr-primary);
 }
+.custom-accordion .accordion-button:focus {
+  box-shadow: none;
+}
 </style>

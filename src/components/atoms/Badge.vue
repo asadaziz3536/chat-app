@@ -31,6 +31,10 @@ export default {
       type: String,
       default: "",
     },
+    linheight: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
@@ -43,13 +47,12 @@ export default {
       height: height,
       padding: padding,
       background: bg,
+      linheight: linheight,
+      fontSize: font,
     }"
     class="badge d-flex align-items-center justify-content-center"
     >{{ content }}</span
   >
 </template>
 <style>
-.badge {
-  background: var(--clr-primary);
-}
 </style>
