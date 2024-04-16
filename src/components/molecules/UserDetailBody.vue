@@ -174,4 +174,9 @@ export default {
 .custom-accordion .accordion-button {
   padding: 14px 16px;
 }
+.custom-accordion .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background: none;
+  color: var(--clr-primary);
+}
 </style>

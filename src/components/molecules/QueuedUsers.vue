@@ -2,12 +2,14 @@
 import HeadingTwo from "../atoms/HeadingTwo.vue";
 import UserListItem from "./UserListItem.vue";
 import ImageOne from "../../assets/images/person.jpg";
+import ProfileImg2 from "../../assets/images/profile-img-2.png";
 export default {
   components: { HeadingTwo, UserListItem },
 
   data() {
     return {
       imgOne: ImageOne,
+      imgTwo: ProfileImg2,
     };
   },
 };
@@ -24,6 +26,7 @@ export default {
       badgeNumber="2"
       :image="imgOne"
       badgeDisplay=""
+      :online="true"
     />
     <UserListItem
       class="px-3"
@@ -32,7 +35,8 @@ export default {
       waitTime="Wait Time"
       time="10m : 25s"
       badgeDisplay="none"
-      :image="imgOne"
+      :image="imgTwo"
+      :online="true"
     />
   </div>
 </template>

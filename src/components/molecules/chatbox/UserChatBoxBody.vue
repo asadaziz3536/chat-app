@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <div class="user-chatbox-body flex-grow-1">
+  <div class="user-chatbox-body flex-grow-1 overflow-auto">
     <div class="chat-message-wrapper">
       <div class="d-flex">
         <AvatarImg />

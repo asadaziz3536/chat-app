@@ -119,24 +119,77 @@ export default {
 
     <div class="d-flex justify-content-between panel">
       <div>
-        <IconBtn @click="applyBold" :svg="BoldSvg" bg="transparent" />
-        <IconBtn @click="applyItalic" :svg="ItalicSvg" bg="transparent" />
+        <IconBtn
+          @click="applyBold"
+          :svg="BoldSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Bold Text"
+        />
+        <IconBtn
+          @click="applyItalic"
+          :svg="ItalicSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Italic Text"
+        />
         <IconBtn :svg="SymbolSvg" bg="transparent" />
         <IconBtn :svg="ASvg" bg="transparent" />
-        <IconBtn @click="ShowHide" :svg="Smiley" bg="transparent" />
-        <IconBtn @click="applyLink" :svg="LinkSvg" bg="transparent" />
-        <IconBtn @click="openImageUpload" :svg="ImgSvg" bg="transparent" />
+        <IconBtn
+          @click="ShowHide"
+          :svg="Smiley"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Add emojis"
+        />
+        <IconBtn
+          @click="applyLink"
+          :svg="LinkSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Add Link"
+        />
+        <IconBtn
+          @click="openImageUpload"
+          :svg="ImgSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Upload Image"
+        />
         <input
           type="file"
           @change="handleFileUpload"
           ref="imageUpload"
           style="display: none"
         />
-        <IconBtn :svg="VideoSvg" bg="transparent" />
+        <IconBtn
+          :svg="VideoSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Video"
+        />
       </div>
       <div>
-        <IconBtn :svg="ShareCard" bg="transparent" />
-        <IconBtn :svg="PlusSvg" bg="transparent" />
+        <IconBtn
+          :svg="ShareCard"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Contact"
+        />
+        <IconBtn
+          :svg="PlusSvg"
+          bg="transparent"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Upload Document"
+        />
       </div>
     </div>
     <EmojiPicker

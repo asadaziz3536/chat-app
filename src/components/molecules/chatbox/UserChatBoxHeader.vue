@@ -5,8 +5,15 @@ import ActionDropdown from "../../atoms/ActionDropdown.vue";
 import AvatarImg from "../../atoms/AvatarImg.vue";
 import CircledIconBtn from "../../atoms/CircledIconBtn.vue";
 import Text from "../../atoms/Text.vue";
+import ProfileImg from "../../../assets/images/profile-img.png";
 export default {
-  components: { AvatarImg, CircledIconBtn, Text, ActionDropdown, Text },
+  components: {
+    AvatarImg,
+    CircledIconBtn,
+    Text,
+    ActionDropdown,
+    Text,
+  },
   data() {
     return {
       heartSvg:
@@ -17,6 +24,7 @@ export default {
         '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.0117 7.1454C20.3857 6.8734 19.6597 6.9914 19.1607 7.4514L16.9997 9.4514V7.9994C16.9997 6.3454 15.6547 4.9994 13.9997 4.9994H4.99969C3.34569 4.9994 1.99969 6.3454 1.99969 7.9994V15.9994C1.99969 17.6544 3.34569 18.9994 4.99969 18.9994H13.9997C15.6547 18.9994 16.9997 17.6544 16.9997 15.9994V14.5484L19.1607 16.5474C19.4817 16.8444 19.8967 16.9994 20.3197 16.9994C20.5527 16.9994 20.7877 16.9524 21.0117 16.8544C21.6207 16.5884 21.9997 16.0194 21.9997 15.3704V8.6294C21.9997 7.9804 21.6207 7.4114 21.0117 7.1454Z" fill="#F36531"/><mask id="mask0_287_616" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="4" width="21" height="15"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.0117 7.1454C20.3857 6.8734 19.6597 6.9914 19.1607 7.4514L16.9997 9.4514V7.9994C16.9997 6.3454 15.6547 4.9994 13.9997 4.9994H4.99969C3.34569 4.9994 1.99969 6.3454 1.99969 7.9994V15.9994C1.99969 17.6544 3.34569 18.9994 4.99969 18.9994H13.9997C15.6547 18.9994 16.9997 17.6544 16.9997 15.9994V14.5484L19.1607 16.5474C19.4817 16.8444 19.8967 16.9994 20.3197 16.9994C20.5527 16.9994 20.7877 16.9524 21.0117 16.8544C21.6207 16.5884 21.9997 16.0194 21.9997 15.3704V8.6294C21.9997 7.9804 21.6207 7.4114 21.0117 7.1454Z" fill="white"/></mask><g mask="url(#mask0_287_616)"><rect width="24" height="24" fill="#F36531"/></g></svg>',
       InfoSvg:
         ' <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=none><path fill-rule=evenodd clip-rule=evenodd d="M12 9C11.448 9 11 8.552 11 8C11 7.448 11.448 7 12 7C12.552 7 13 7.448 13 8C13 8.552 12.552 9 12 9ZM13 16C13 16.552 12.552 17 12 17C11.448 17 11 16.552 11 16V11C11 10.448 11.448 10 12 10C12.552 10 13 10.448 13 11V16ZM12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.522 22 22 17.523 22 12C22 6.477 17.522 2 12 2Z" fill=#F36531 /><mask id=mask0_287_626 style=mask-type:luminance maskUnits=userSpaceOnUse x=2 y=2 width=20 height=20><path fill-rule=evenodd clip-rule=evenodd d="M12 9C11.448 9 11 8.552 11 8C11 7.448 11.448 7 12 7C12.552 7 13 7.448 13 8C13 8.552 12.552 9 12 9ZM13 16C13 16.552 12.552 17 12 17C11.448 17 11 16.552 11 16V11C11 10.448 11.448 10 12 10C12.552 10 13 10.448 13 11V16ZM12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.522 22 22 17.523 22 12C22 6.477 17.522 2 12 2Z" fill=white /></mask><g mask=url(#mask0_287_626)><rect width=24 height=24 fill=#F36531 /></g></svg>',
+      profileImg: ProfileImg,
     };
   },
 
@@ -32,8 +40,8 @@ export default {
 <template>
   <div class="user-chatbox-head">
     <div class="d-flex align-items-center justify-content-between">
-      <div>
-        <AvatarImg />
+      <div class="d-flex gap-2">
+        <AvatarImg :source="profileImg" />
         <Text class="fw-semibold clr-dark" content="Sophie Okonedo" />
         <CircledIconBtn :svg="heartSvg" />
       </div>

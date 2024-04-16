@@ -58,6 +58,10 @@ export default {
       type: String,
       default: "",
     },
+    online: {
+      type: Boolean,
+      default: "",
+    },
   },
 };
 </script>
@@ -66,7 +70,8 @@ export default {
   <li class="user-list-item d-flex justify-content-between gap-2">
     <div class="position-relative">
       <AvatarImg :source="image" width="40px" height="40px" />
-      <div class="active"></div>
+
+      <div :style="{ display: online ? 'block' : 'none' }" class="active"></div>
     </div>
     <div class="flex-grow-1">
       <div class="d-flex justify-content-between">
