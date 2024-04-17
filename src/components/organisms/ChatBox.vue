@@ -26,6 +26,16 @@ export default {
 @media screen and (max-width: 991.98px) {
   .user-chatbox {
     display: none;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 62px;
+    z-index: 100000;
+  }
+  .user-chatbox-body {
+    height: 74vh;
   }
 }
 </style>

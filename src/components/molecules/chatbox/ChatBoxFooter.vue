@@ -1,10 +1,9 @@
 <script>
 import CircledIconBtn from "../../atoms/CircledIconBtn.vue";
 import IconBtn from "../../atoms/IconBtn.vue";
-// import picker compopnent
+// Emoji picker component
 import EmojiPicker from "vue3-emoji-picker";
-
-// import css
+// Emoji picker css
 import "vue3-emoji-picker/css";
 export default {
   components: { CircledIconBtn, IconBtn, EmojiPicker },
@@ -197,7 +196,7 @@ export default {
   </div>
 </template>
 <style scoped>
-/* Footer Style */
+/* Chatbox Footer Style */
 textarea {
   border-top: 1px solid #dfe2e8;
   width: 100%;

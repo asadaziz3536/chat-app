@@ -1,5 +1,16 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      searchInput: "",
+    };
+  },
+  methods: {
+    updateSearch() {
+      this.$store.dispatch("updateSearchQuery", this.searchInput);
+    },
+  },
+};
 </script>
 
 <template>
@@ -23,6 +34,8 @@ export default {};
       name=""
       id=""
       placeholder="Search messages"
+      v-model="searchInput"
+      @input="updateSearch"
     />
   </div>
 </template>

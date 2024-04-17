@@ -11,11 +11,15 @@ import EmojiPicker from "vue3-emoji-picker";
 // Emoji Picker css
 import "vue3-emoji-picker/css";
 
+// Import vuex store
+import store from "./store";
+
 const app = createApp(App);
 
 let router = createRouter({
   history: createWebHistory(),
   routes,
 });
+app.use(store);
 app.use(router);
 app.mount("#app");
