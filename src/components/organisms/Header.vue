@@ -11,7 +11,9 @@ export default {
 <template>
   <div class="header-wrapper">
     <div>
-      <Logo />
+      <router-link to="/" class="logo">
+        <Logo />
+      </router-link>
     </div>
     <div>
       <HeaderInnerRight />
@@ -21,11 +23,5 @@ export default {
 
 
 
-<style>
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #dfe2e8;
-  padding: 8px;
-}
+<style scoped>
 </style>

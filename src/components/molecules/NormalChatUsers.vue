@@ -23,14 +23,14 @@ export default {
         (User, index) => User.status === "normal"
       );
     },
-    showChatBox() {
+    showChatBox(user) {
       let chatBox = document.querySelector(".user-chatbox");
-      chatBox.style.display = "block";
+      chatBox.style.left = "0%";
+      this.$store.dispatch("updateUserData", user);
     },
   },
   mounted() {
     this.getNormalUsers();
-    console.log("normal users", this.NormalUsers);
   },
   computed: {
     ...mapGetters(["searchQuery"]),
@@ -49,7 +49,7 @@ export default {
   <div class="normal-users">
     <HeadingTwo content="Chats" class="py-4 px-3" />
     <UserListItem
-      @click="showChatBox"
+      @click="showChatBox(chatUser)"
       class="px-3"
       v-for="chatUser in searchQuery ? normalChatUsersFiltered : NormalUsers"
       :key="chatUser.id"

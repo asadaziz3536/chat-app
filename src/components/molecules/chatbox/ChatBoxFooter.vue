@@ -223,9 +223,10 @@ textarea {
   border-top: 1px solid #dfe2e8;
   width: 100%;
   display: flex;
-  flex-direction: column;
   overflow: auto;
   word-break: break-all;
+  max-height: 140px;
+  overflow-y: auto;
 }
 .chat-input:focus-visible {
   outline: none;
@@ -233,7 +234,7 @@ textarea {
 .chat-input:empty:before {
   content: attr(placeholder);
   pointer-events: none;
-  display: block; /* For Firefox */
+  display: block;
 }
 .panel button:hover {
   background: var(--clr-lighter-variant-two) !important;
@@ -257,5 +258,11 @@ textarea {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 991.98px) {
+  .user-chatbox-footer {
+    padding-bottom: 70px;
+  }
 }
 </style>

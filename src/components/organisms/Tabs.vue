@@ -32,7 +32,6 @@ export default {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          class="mb-2"
         >
           <path
             fill-rule="evenodd"
@@ -78,7 +77,6 @@ export default {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          class="mb-2"
         >
           <path
             fill-rule="evenodd"
@@ -124,7 +122,6 @@ export default {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="mb-2"
         >
           <g clip-path="url(#clip0_87_323)">
             <path
@@ -153,29 +150,23 @@ export default {
         role="tabpanel"
         aria-labelledby="v-pills-home-tab"
       >
-        <ChatsList />
+        <ChatsList title="Chats" />
       </div>
       <div
         class="tab-pane fade"
         id="v-pills-profile"
         role="tabpanel"
         aria-labelledby="v-pills-profile-tab"
-      ></div>
+      >
+        <ChatsList title="People" />
+      </div>
       <div
         class="tab-pane fade"
         id="v-pills-messages"
         role="tabpanel"
         aria-labelledby="v-pills-messages-tab"
       >
-        ...
-      </div>
-      <div
-        class="tab-pane fade"
-        id="v-pills-settings"
-        role="tabpanel"
-        aria-labelledby="v-pills-settings-tab"
-      >
-        ...
+        <ChatsList title="Rooms" />
       </div>
     </div>
   </div>
@@ -228,6 +219,12 @@ export default {
   }
   .tabs-wrapper .custom-tabs .nav-link {
     flex-grow: 1;
+  }
+
+  .custom-tabs .nav-link.active {
+    background: #fef0ea;
+    border-right: none;
+    border-bottom: 2px solid var(--clr-primary);
   }
 }
 </style>

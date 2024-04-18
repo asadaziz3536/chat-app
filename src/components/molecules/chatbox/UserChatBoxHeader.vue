@@ -24,18 +24,31 @@ export default {
         '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.0117 7.1454C20.3857 6.8734 19.6597 6.9914 19.1607 7.4514L16.9997 9.4514V7.9994C16.9997 6.3454 15.6547 4.9994 13.9997 4.9994H4.99969C3.34569 4.9994 1.99969 6.3454 1.99969 7.9994V15.9994C1.99969 17.6544 3.34569 18.9994 4.99969 18.9994H13.9997C15.6547 18.9994 16.9997 17.6544 16.9997 15.9994V14.5484L19.1607 16.5474C19.4817 16.8444 19.8967 16.9994 20.3197 16.9994C20.5527 16.9994 20.7877 16.9524 21.0117 16.8544C21.6207 16.5884 21.9997 16.0194 21.9997 15.3704V8.6294C21.9997 7.9804 21.6207 7.4114 21.0117 7.1454Z" fill="#F36531"/><mask id="mask0_287_616" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="4" width="21" height="15"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.0117 7.1454C20.3857 6.8734 19.6597 6.9914 19.1607 7.4514L16.9997 9.4514V7.9994C16.9997 6.3454 15.6547 4.9994 13.9997 4.9994H4.99969C3.34569 4.9994 1.99969 6.3454 1.99969 7.9994V15.9994C1.99969 17.6544 3.34569 18.9994 4.99969 18.9994H13.9997C15.6547 18.9994 16.9997 17.6544 16.9997 15.9994V14.5484L19.1607 16.5474C19.4817 16.8444 19.8967 16.9994 20.3197 16.9994C20.5527 16.9994 20.7877 16.9524 21.0117 16.8544C21.6207 16.5884 21.9997 16.0194 21.9997 15.3704V8.6294C21.9997 7.9804 21.6207 7.4114 21.0117 7.1454Z" fill="white"/></mask><g mask="url(#mask0_287_616)"><rect width="24" height="24" fill="#F36531"/></g></svg>',
       InfoSvg:
         ' <svg xmlns=http://www.w3.org/2000/svg width=24 height=24 viewBox="0 0 24 24" fill=none><path fill-rule=evenodd clip-rule=evenodd d="M12 9C11.448 9 11 8.552 11 8C11 7.448 11.448 7 12 7C12.552 7 13 7.448 13 8C13 8.552 12.552 9 12 9ZM13 16C13 16.552 12.552 17 12 17C11.448 17 11 16.552 11 16V11C11 10.448 11.448 10 12 10C12.552 10 13 10.448 13 11V16ZM12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.522 22 22 17.523 22 12C22 6.477 17.522 2 12 2Z" fill=#F36531 /><mask id=mask0_287_626 style=mask-type:luminance maskUnits=userSpaceOnUse x=2 y=2 width=20 height=20><path fill-rule=evenodd clip-rule=evenodd d="M12 9C11.448 9 11 8.552 11 8C11 7.448 11.448 7 12 7C12.552 7 13 7.448 13 8C13 8.552 12.552 9 12 9ZM13 16C13 16.552 12.552 17 12 17C11.448 17 11 16.552 11 16V11C11 10.448 11.448 10 12 10C12.552 10 13 10.448 13 11V16ZM12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.522 22 22 17.523 22 12C22 6.477 17.522 2 12 2Z" fill=white /></mask><g mask=url(#mask0_287_626)><rect width=24 height=24 fill=#F36531 /></g></svg>',
+      threeDotsIcon:
+        '<svg xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.00014 4C3.10414 4 4.00014 3.104 4.00014 2C4.00014 0.896 3.10414 0 2.00014 0C0.896137 0 0.000137329 0.896 0.000137329 2C0.000137329 3.104 0.896137 4 2.00014 4ZM2.00014 7C0.896137 7 0.000137329 7.896 0.000137329 9C0.000137329 10.104 0.896137 11 2.00014 11C3.10414 11 4.00014 10.104 4.00014 9C4.00014 7.896 3.10414 7 2.00014 7ZM0.000137329 16C0.000137329 14.896 0.896137 14 2.00014 14C3.10414 14 4.00014 14.896 4.00014 16C4.00014 17.104 3.10414 18 2.00014 18C0.896137 18 0.000137329 17.104 0.000137329 16Z" fill="#5F6269"/></svg>',
       profileImg: ProfileImg,
+      screenWidth: window.innerWidth,
     };
   },
 
   methods: {
     ShowHide() {
       const rightBar = document.querySelector(".right-bar");
-      rightBar.classList.toggle("d-none");
+      if (this.screenWidth <= 991.98) {
+        rightBar.style.display = "block";
+      } else {
+        rightBar.classList.toggle("d-none");
+      }
     },
     closeChatBox() {
       let chatBox = document.querySelector(".user-chatbox");
-      chatBox.style.display = "none";
+      chatBox.style.left = "100%";
+    },
+  },
+  props: {
+    userData: {
+      type: Object,
+      default: {},
     },
   },
 };
@@ -44,8 +57,8 @@ export default {
 <template>
   <div class="user-chatbox-head">
     <div class="d-flex align-items-center justify-content-between">
-      <div class="d-flex gap-2">
-        <span @click="closeChatBox"
+      <div class="d-flex align-items-center gap-2">
+        <span @click="closeChatBox" class="d-block d-lg-none"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -60,11 +73,20 @@ export default {
             />
           </svg>
         </span>
-        <AvatarImg :source="profileImg" />
-        <Text class="fw-semibold clr-dark" content="Sophie Okonedo" />
+        <AvatarImg
+          :source="
+            userData ? userData.image : '/src/assets/images/profile-img-2.png'
+          "
+          width="36"
+          height="36"
+        />
+        <Text
+          class="fw-semibold clr-dark"
+          :content="userData ? userData.name : 'Sophie Okonedo'"
+        />
         <CircledIconBtn :svg="heartSvg" />
       </div>
-      <div class="d-flex right-btns gap-3">
+      <div class="d-flex right-btns">
         <CircledIconBtn
           :svg="CallSvg"
           bg="transparent"
@@ -79,7 +101,7 @@ export default {
           data-placement="bottom"
           title="Video Call"
         />
-        <ActionDropdown padding="0" class="p-0" />
+        <ActionDropdown :svg="threeDotsIcon" />
         <CircledIconBtn
           @click="ShowHide"
           :svg="InfoSvg"
@@ -98,9 +120,15 @@ export default {
   padding: 21px;
 }
 .user-chatbox-head .right-btns {
-  gap: 8px;
+  gap: 16px;
 }
 .user-chatbox-head .custom-dropdown .dropdown-toggle svg path {
   fill: rgb(243, 101, 49);
+}
+
+@media screen and (max-width: 767.98px) {
+  .user-chatbox-head .right-btns {
+    gap: 2px;
+  }
 }
 </style>

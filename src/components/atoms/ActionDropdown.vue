@@ -11,6 +11,26 @@ export default {
       type: String,
       default: "",
     },
+    svg: {
+      type: String,
+      default: "",
+    },
+    outline: {
+      type: String,
+      default: "",
+    },
+    border: {
+      type: String,
+      default: "",
+    },
+    listGroup: {
+      type: Boolean,
+      default: false,
+    },
+    dropdownMenu: {
+      type: Boolean,
+      default: true,
+    },
   },
 };
 </script>
@@ -25,28 +45,64 @@ export default {
       aria-expanded="false"
       :style="{
         padding: padding,
+        outline: outline,
+        border: border,
       }"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M12.0001 7C13.1041 7 14.0001 6.104 14.0001 5C14.0001 3.896 13.1041 3 12.0001 3C10.8961 3 10.0001 3.896 10.0001 5C10.0001 6.104 10.8961 7 12.0001 7ZM12.0001 10C10.8961 10 10.0001 10.896 10.0001 12C10.0001 13.104 10.8961 14 12.0001 14C13.1041 14 14.0001 13.104 14.0001 12C14.0001 10.896 13.1041 10 12.0001 10ZM10.0001 19C10.0001 17.896 10.8961 17 12.0001 17C13.1041 17 14.0001 17.896 14.0001 19C14.0001 20.104 13.1041 21 12.0001 21C10.8961 21 10.0001 20.104 10.0001 19Z"
-          fill="#5F6269"
-        />
-      </svg>
+      <div v-html="svg"></div>
     </a>
 
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <div v-if="dropdownMenu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </div>
+
+      <div class="list-group" v-if="listGroup">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start active"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+            eget risus varius blandit.
+          </p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+            eget risus varius blandit.
+          </p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+        <a
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">
+            Donec id elit non mi porta gravida at eget metus. Maecenas sed diam
+            eget risus varius blandit.
+          </p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+      </div>
     </ul>
   </div>
 </template>

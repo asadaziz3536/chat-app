@@ -41,6 +41,7 @@
   --clr-lighter: #5f6269;
   --clr-lighter-variant: #b5b8be;
   --clr-lighter-variant-two: #dfe2e8;
+  --clr-lighter-variant-three: #f0f2f6;
   --clr-success: #58b859;
   --clr-blue: #0061f9;
 }
@@ -89,6 +90,35 @@ h3 {
   color: var(--clr-blue);
 }
 
+/* Buttons style and states  */
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--clr-lighter-variant-two);
+}
+
+.icon-btn:hover {
+  background-color: var(--clr-primary);
+}
+.icon-btn:hover svg {
+  fill: #fff;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Header Section */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe2e8;
+  padding: 8px;
+}
+
+.header-wrapper .icon-btn:hover svg path {
+  fill: #fff;
+}
+
 /* Chats List global style */
 
 .users-chat-list .user-list-item .action-dropdown {
@@ -105,6 +135,7 @@ h3 {
 }
 .users-chat-list .user-list-item:hover {
   background: var(--clr-primary-light);
+  cursor: pointer;
 }
 .users-chat-list .user-list-item:hover .clr-lighter {
   color: var(--clr-dark);
@@ -112,7 +143,31 @@ h3 {
 .users-chat-list .user-list-item:hover .clr-light {
   color: var(--clr-lighter);
 }
-
+.user-list-item {
+  border-bottom: 1px solid #dfe2e8;
+  padding: 12px 0px;
+}
+.active-user {
+  background: var(--clr-success);
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.normal-users .user-list-item .time {
+  color: var(--clr-lighter-variant);
+}
+.queued-users .user-list-item .time {
+  color: var(--clr-dark);
+  font-weight: 800;
+}
+.badge-pill {
+  border-radius: 10px;
+  line-height: 1.1;
+}
 /* Scroll bar design  */
 .custom-scrollbar::-webkit-scrollbar {
   width: 10px;
@@ -132,4 +187,20 @@ h3 {
 /* Handle on hover */
 .custom-scrollbar ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Tabs Style */
+.custom-tabs button svg {
+  margin-bottom: 7px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 991.98px) {
+  .header-wrapper .logo {
+    width: 120px;
+    display: block;
+  }
+  .custom-tabs button svg {
+    margin-bottom: 0px;
+  }
 }

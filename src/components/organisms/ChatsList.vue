@@ -27,7 +27,7 @@ export default {
           content: "Hello Emily How are you",
           recepient: "You: ",
           time: "8m: 20s",
-          badgeNumber: 2,
+          badgeNumber: "2",
           image: personImage,
           online: true,
           badgebg: "#f36531",
@@ -51,7 +51,7 @@ export default {
           content: "Hello all session is started join...",
           recepient: "You: ",
           time: "1hr",
-          badgeNumber: 2,
+          badgeNumber: "2",
           image: ProfileImg,
           online: false,
           badgebg: "#f36531",
@@ -65,7 +65,7 @@ export default {
           designation: "UX Designer | GreenScape Solutions",
           draft: "Draft: ",
           image: ProfileImgTwo,
-          badgeNumber: 5,
+          badgeNumber: "5",
           badgebg: "#5F6269",
           time: "1hr",
           status: "normal",
@@ -90,7 +90,7 @@ export default {
           image: ProfileImgFour,
           time: "1hr",
           badgeDisplay: "none",
-          online: "false",
+          online: false,
           status: "normal",
         },
         {
@@ -102,7 +102,7 @@ export default {
           time: "1hr",
           waitTime: "",
           badgeDisplay: "none",
-          online: "false",
+          online: false,
           status: "normal",
         },
         {
@@ -122,11 +122,17 @@ export default {
       ],
     };
   },
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 <template>
   <div class="users-chat-list custom-scrollbar">
-    <ChatsHeader />
+    <ChatsHeader :title="title" />
     <QueuedUsers :chatUsers="chatUsers" />
     <NormalChatUsers :chatUsers="chatUsers" />
   </div>

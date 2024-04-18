@@ -23,9 +23,13 @@ export default {
         (User, index) => User.status === "queued"
       );
     },
-    showChatBox() {
+    showChatBox(user) {
       let chatBox = document.querySelector(".user-chatbox");
-      chatBox.style.display = "block";
+      chatBox.style.left = "0%";
+
+      console.log("user", user);
+
+      this.$store.dispatch("updateUserData", user);
     },
   },
   mounted() {
@@ -46,7 +50,7 @@ export default {
   <div class="queued-users">
     <HeadingTwo content="Queued" class="py-4 px-3" />
     <UserListItem
-      @click="showChatBox"
+      @click="showChatBox(chatUser)"
       v-for="chatUser in searchQuery ? queuedUsersFiltered : queuedUsers"
       :key="chatUser.id"
       class="px-3"
@@ -63,17 +67,6 @@ export default {
       :badgePillbg="chatUser.badgePillbg"
       :badgePillContent="chatUser.badgePillContent"
     />
-
-    <!-- <UserListItem
-      class="px-3"
-      name="Sophie Okonedo"
-      designation="UX Designer | GreenScape Solut..."
-      waitTime="Wait Time"
-      time="10m : 25s"
-      badgeDisplay="none"
-      :image="imgTwo"
-      :online="true"
-    />  -->
   </div>
 </template>
 <style>
