@@ -1,4 +1,5 @@
 <script>
+import ActionDropdown from "../../atoms/ActionDropdown.vue";
 import CircledIconBtn from "../../atoms/CircledIconBtn.vue";
 import IconBtn from "../../atoms/IconBtn.vue";
 // Emoji picker component
@@ -6,7 +7,7 @@ import EmojiPicker from "vue3-emoji-picker";
 // Emoji picker css
 import "vue3-emoji-picker/css";
 export default {
-  components: { CircledIconBtn, IconBtn, EmojiPicker },
+  components: { CircledIconBtn, IconBtn, EmojiPicker, ActionDropdown },
   data() {
     return {
       BoldSvg:
@@ -53,6 +54,7 @@ export default {
       console.log("input reference", this.$refs.textInput.innerHTML);
       this.$refs.textInput.innerHTML += this.SelectedEmoji;
     },
+    // Toggle Emoji Picker
     ShowHide() {
       this.emojiPickerShow = !this.emojiPickerShow;
     },
@@ -78,6 +80,25 @@ export default {
         range.deleteContents(); // Delete the selected content
         range.insertNode(link); // Insert the link at the selected position
       }
+    },
+    applyCapitalize() {
+      // Get the input element reference
+      const inputElement = this.$refs.textInput;
+
+      // Get the selected text range
+      const selectionStart = inputElement.selectionStart;
+      const selectionEnd = inputElement.selectionEnd;
+
+      // Get the text before and after the selected range
+      const textBeforeSelection = this.message.substring(0, selectionStart);
+      const selectedText = this.message.substring(selectionStart, selectionEnd);
+      const textAfterSelection = this.message.substring(selectionEnd);
+
+      // Capitalize the selected text
+      const capitalizedText = selectedText.toUpperCase();
+
+      // Update the message with the capitalized text
+      this.message = textBeforeSelection + capitalizedText + textAfterSelection;
     },
     openImageUpload(event) {
       this.$refs.imageUpload.click();
@@ -131,7 +152,7 @@ export default {
           title="Italic Text"
         />
         <IconBtn :svg="SymbolSvg" bg="transparent" />
-        <IconBtn :svg="ASvg" bg="transparent" />
+        <IconBtn @click="applyCapitalize" :svg="ASvg" bg="transparent" />
         <IconBtn
           @click="ShowHide"
           :svg="Smiley"
@@ -170,7 +191,7 @@ export default {
           title="Video"
         />
       </div>
-      <div>
+      <div class="d-flex">
         <IconBtn
           :svg="ShareCard"
           bg="transparent"
@@ -178,8 +199,9 @@ export default {
           data-placement="top"
           title="Contact"
         />
-        <IconBtn
+        <ActionDropdown
           :svg="PlusSvg"
+          padding="0"
           bg="transparent"
           data-toggle="tooltip"
           data-placement="top"

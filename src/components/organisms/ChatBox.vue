@@ -7,14 +7,8 @@ import ChatBoxHeader from "../molecules/chatbox/UserChatBoxHeader.vue";
 export default {
   components: { ChatBoxHeader, ChatBoxBody, ChatBoxFooter },
 
-  // computed: {
-  //   ...mapGetters(["userData"]),
-  // },
-
   data() {
-    return {
-      // userData: this.$store.state.userData,
-    };
+    return {};
   },
 };
 </script>

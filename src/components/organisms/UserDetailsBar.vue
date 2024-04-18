@@ -2,6 +2,7 @@
 import Notes from "../molecules/Notes.vue";
 import UserDetailBody from "../molecules/UserDetailBody.vue";
 import UserDetailHead from "../molecules/UserDetailHead.vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
@@ -9,22 +10,24 @@ export default {
     Notes,
     UserDetailHead,
   },
+  computed: {
+    ...mapGetters(["isSidebarVisible", "userData"]),
+  },
   methods: {
     closeRightBar() {
-      let rightBar = document.querySelector(".right-bar");
-      rightBar.style.display = "none";
+      this.$store.dispatch("updateCloseSidebar");
     },
   },
 };
 </script>
 <template>
-  <div class="right-bar overflow-auto custom-scrollbar">
+  <div class="right-bar overflow-auto custom-scrollbar" v-if="isSidebarVisible">
     <span @click="closeRightBar" class="close-icon d-flex d-lg-none">X</span>
     <div
       class="user-details-wrapper d-flex justify-content-between flex-column h-100"
     >
       <div>
-        <UserDetailHead />
+        <UserDetailHead :userData="userData" />
         <UserDetailBody />
       </div>
 
@@ -49,7 +52,6 @@ export default {
     z-index: 100000;
     background: #fff;
     box-shadow: 6px 10px 10px 5px #ccc;
-    display: none;
   }
   .right-bar .close-icon {
     position: absolute;

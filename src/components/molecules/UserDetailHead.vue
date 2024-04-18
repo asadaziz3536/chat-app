@@ -25,20 +25,35 @@ export default {
       profileImg: ProfileImg,
     };
   },
+  props: {
+    userData: {
+      type: Object,
+      default: {},
+    },
+  },
 };
 </script>
 <template>
   <div class="d-flex align-items-start justify-content-between user-main-info">
     <div class="d-flex gap-2">
       <div>
-        <AvatarImg :source="profileImg" width="48" height="48" />
+        <AvatarImg
+          :source="userData ? userData.image : profileImg"
+          width="48"
+          height="48"
+        />
       </div>
 
       <div>
-        <Text class="fw-semibold clr-dark" content="Sophie Okonedo" />
+        <Text
+          class="fw-semibold clr-dark"
+          :content="userData ? userData.name : 'Sophie Okonedo'"
+        />
         <Text
           class="d-block fs-12"
-          content="Senior UX/UI Designer at Nexus"
+          :content="
+            userData ? userData.designation : 'Senior UX/UI Designer at Nexus'
+          "
           color="#667085"
         />
         <Text

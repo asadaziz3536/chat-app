@@ -26,9 +26,6 @@ export default {
     showChatBox(user) {
       let chatBox = document.querySelector(".user-chatbox");
       chatBox.style.left = "0%";
-
-      console.log("user", user);
-
       this.$store.dispatch("updateUserData", user);
     },
   },
