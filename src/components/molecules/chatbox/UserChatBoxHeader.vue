@@ -33,14 +33,17 @@ export default {
   },
 
   methods: {
+    // Function defining the closing of chatbox
     closeChatBox() {
       let chatBox = document.querySelector(".user-chatbox");
       chatBox.style.left = "100%";
     },
+    // Toggle the sidebar
     toggleSidebar() {
       this.$store.dispatch("updatetoggleSidebar");
     },
   },
+  // Props section, defining the properties accepted by the component
   props: {
     userData: {
       type: Object,
@@ -51,6 +54,7 @@ export default {
 </script>
 
 <template>
+  <!-- Chat Box Header -->
   <div class="user-chatbox-head">
     <div class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center gap-2">

@@ -12,7 +12,7 @@ export default {
     AvatarImg,
     ActionDropdown,
   },
-
+  // Props section, defining the properties accepted by the component
   props: {
     name: {
       type: String,
@@ -81,6 +81,7 @@ export default {
 </script>
 
 <template>
+  <!-- User List Item  -->
   <li class="user-list-item d-flex justify-content-between gap-2">
     <div class="position-relative">
       <AvatarImg :source="image" width="40px" height="40px" />

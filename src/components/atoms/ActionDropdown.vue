@@ -1,21 +1,27 @@
 
 
 <script>
+// This script section defines the Vue component
 export default {
+  // Props section, defining the properties accepted by the component
   props: {
+    // Background color of the dropdown
     bg: {
       type: String,
       default: "",
     },
     padding: {
+      // Padding of the dropdown
       type: String,
       default: "",
     },
     svg: {
+      // SVG content to be displayed within the dropdown
       type: String,
       default: "",
     },
     outline: {
+      // Outline style of the dropdown
       type: String,
       default: "",
     },
@@ -24,10 +30,12 @@ export default {
       default: "",
     },
     listGroup: {
+      // Boolean indicating whether the dropdown should display as a list group
       type: Boolean,
       default: false,
     },
     dropdownMenu: {
+      // Boolean indicating whether the dropdown should display as a menu
       type: Boolean,
       default: true,
     },

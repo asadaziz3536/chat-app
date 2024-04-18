@@ -122,6 +122,7 @@ export default {
       ],
     };
   },
+  // Props section, defining the properties accepted by the component
   props: {
     title: {
       type: String,

@@ -9,6 +9,7 @@ export default {
 };
 </script>
 <template>
+  <!-- Header Section  -->
   <div class="header-wrapper">
     <div>
       <router-link to="/" class="logo">

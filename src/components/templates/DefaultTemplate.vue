@@ -17,6 +17,7 @@ export default {
 </script>
 
 <template>
+  <!-- Default Template  -->
   <Header />
   <div class="main-contain d-flex">
     <Tabs />

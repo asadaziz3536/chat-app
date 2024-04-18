@@ -94,13 +94,16 @@ h3 {
 .icon-btn {
   width: 40px;
   height: 40px;
-  background-color: var(--clr-lighter-variant-two);
+  background-color: var(--clr-lighter-variant-three);
 }
 
 .icon-btn:hover {
   background-color: var(--clr-primary);
 }
 .icon-btn:hover svg {
+  fill: #fff;
+}
+.icon-btn:hover div svg > path {
   fill: #fff;
 }
 .cursor-pointer {

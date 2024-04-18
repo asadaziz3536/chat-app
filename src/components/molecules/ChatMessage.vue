@@ -66,7 +66,12 @@ export default {
           <img :src="chatMessage.fileThumbnail" alt="" />
         </div>
         <div class="d-flex align-items-center">
-          <div class="chat-message">
+          <div
+            class="chat-message"
+            :style="{
+              background: chatMessage.sender === 'Bot' ? '#CEE1FD' : '',
+            }"
+          >
             <Paragraph class="fs-16 mb-0" :content="chatMessage.message" />
           </div>
           <div class="d-flex action-btns" v-if="!chatMessage.response === true">

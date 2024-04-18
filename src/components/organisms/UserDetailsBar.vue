@@ -21,6 +21,7 @@ export default {
 };
 </script>
 <template>
+  <!-- User details side bar -->
   <div class="right-bar overflow-auto custom-scrollbar" v-if="isSidebarVisible">
     <span @click="closeRightBar" class="close-icon d-flex d-lg-none">X</span>
     <div

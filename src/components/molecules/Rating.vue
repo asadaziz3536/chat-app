@@ -17,6 +17,4 @@ export default {
   </div>
 </template>
 <style scoped>
-.rating {
-}
 </style>

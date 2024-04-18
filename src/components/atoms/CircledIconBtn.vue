@@ -1,7 +1,6 @@
-<!-- CircledIconBtn.vue -->
-
 <script>
 export default {
+  // Props section, defining the properties accepted by the component
   props: {
     svg: {
       type: String,

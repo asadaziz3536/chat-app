@@ -1,5 +1,6 @@
 <script>
 export default {
+  // Props section, defining the properties accepted by the component
   props: {
     content: {
       type: String,

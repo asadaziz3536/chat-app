@@ -9,6 +9,7 @@ export default {
 };
 </script>
 <template>
+  <!-- Main Tabs Section  -->
   <div class="tabs-wrapper d-flex align-items-start flex-column flex-lg-row">
     <div
       class="nav custom-tabs flex-row flex-lg-column nav-pills"

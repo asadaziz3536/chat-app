@@ -58,6 +58,7 @@ export default {
     ShowHide() {
       this.emojiPickerShow = !this.emojiPickerShow;
     },
+    // Chat input formatting buttons functions
     applyFormatting(tag) {
       document.execCommand(tag, false, null);
     },

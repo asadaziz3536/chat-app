@@ -9,6 +9,7 @@ export default {
 };
 </script>
 <template>
+  <!-- User Detail Body -->
   <div class="tabs-wrapper d-flex align-items-start flex-column">
     <div
       class="nav custom-tabs nav-pills w-100"

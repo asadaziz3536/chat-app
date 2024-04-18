@@ -1,4 +1,5 @@
 <script>
+// Props section, defining the properties accepted by the component
 export default {
   data() {
     return {

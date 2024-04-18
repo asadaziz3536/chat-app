@@ -10,6 +10,7 @@ export default {
     ActionDropddown,
     Input,
   },
+  // Props section, defining the properties accepted by the component
   props: {
     title: {
       type: String,

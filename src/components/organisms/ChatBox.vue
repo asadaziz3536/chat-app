@@ -6,13 +6,10 @@ import ChatBoxHeader from "../molecules/chatbox/UserChatBoxHeader.vue";
 
 export default {
   components: { ChatBoxHeader, ChatBoxBody, ChatBoxFooter },
-
-  data() {
-    return {};
-  },
 };
 </script>
 <template>
+  <!-- Chat Box Section  -->
   <div class="user-chatbox flex-grow-1">
     <ChatBoxHeader :userData="$store.state.userData" />
     <ChatBoxBody :userData="$store.state.userData" />
