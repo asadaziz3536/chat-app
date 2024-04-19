@@ -53,6 +53,7 @@ export default {
     z-index: 100000;
     background: #fff;
     box-shadow: 6px 10px 10px 5px #ccc;
+    bottom: 0;
   }
   .right-bar .close-icon {
     position: absolute;
