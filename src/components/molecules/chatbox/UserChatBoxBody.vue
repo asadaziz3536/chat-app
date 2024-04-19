@@ -38,7 +38,7 @@ export default {
         },
         {
           sender: "Sophie Okonedo",
-          avatarSource: "/src/assets/images/profile-img-2.png",
+          avatarSource: "../../src/assets/images/profile-img-2.png",
           time: "9:30 AM",
           message:
             "Hi Alex! Have you heard about the upcoming virtual UX design event next month?",
@@ -46,14 +46,14 @@ export default {
         },
         {
           sender: "You",
-          avatarSource: "/src/assets/images/me.png",
+          avatarSource: "../../src/assets/images/me.png",
           time: "9:30 AM",
           message: "Hey Ali! Yes, I got tickets. Super excited! 🎶",
           response: true,
         },
         {
           sender: "Sophie Okonedo",
-          avatarSource: "/src/assets/images/profile-img-2.png",
+          avatarSource: "../../src/assets/images/profile-img-2.png",
           time: "9:30 AM",
           message: "Hey Samir! Are you going to the concert tomorrow night?",
           actions: ["Share", "More Options", "Add emojis"],
@@ -64,11 +64,11 @@ export default {
           time: "9:30 AM",
           message: "Hey Sophie! Yes, I got tickets. Super excited! 🎶",
           response: true,
-          fileThumbnail: "/src/assets/images/thumbnail.png",
+          fileThumbnail: "../../src/assets/images/thumbnail.png",
         },
         {
           sender: "Sophie Okonedo",
-          avatarSource: "/src/assets/images/profile-img-2.png",
+          avatarSource: "../../src/assets/images/profile-img-2.png",
           time: "9:30 AM",
           message: "Hey Sophe! Yes I got tickets. Super Excited",
           actions: ["Share", "More Options", "Add emojis"],

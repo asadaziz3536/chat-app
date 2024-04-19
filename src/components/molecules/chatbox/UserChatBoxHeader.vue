@@ -6,6 +6,7 @@ import AvatarImg from "../../atoms/AvatarImg.vue";
 import CircledIconBtn from "../../atoms/CircledIconBtn.vue";
 import Text from "../../atoms/Text.vue";
 import ProfileImg from "../../../assets/images/profile-img.png";
+import ProfileImg2 from "../../../assets/images/profile-img-2.png";
 export default {
   components: {
     AvatarImg,
@@ -77,7 +78,7 @@ export default {
           :source="
             userData
               ? userData.image
-              : '.../../src/assets/images/profile-img-2.png'
+              : '../../src/assets/images/profile-img-2.png'
           "
           width="36"
           height="36"
