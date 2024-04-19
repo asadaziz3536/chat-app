@@ -14,11 +14,16 @@ export default {
       type: String,
       default: "",
     },
+    html: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 <template>
-  <p :style="{ color: color, background: bg }">{{ content }}</p>
+  <p v-if="!html" :style="{ color: color, background: bg }">{{ content }}</p>
+  <p v-else v-html="content"></p>
 </template>
 <style>
 </style>

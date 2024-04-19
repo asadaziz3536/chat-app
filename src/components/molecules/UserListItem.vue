@@ -101,7 +101,7 @@ export default {
         />
         <div>
           <Text
-            :content="waitTime"
+            :content="waitTime ? waitTime : ''"
             class="fw-regular fs-14 clr-lighter d-block"
           />
           <Text :content="time" class="time d-block fs-14" />

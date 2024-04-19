@@ -37,6 +37,33 @@ export default {
       default: {},
     },
   },
+  methods: {
+    formatMessage(message) {
+      // Split the message into paragraphs
+      const paragraphs = message.split("\n");
+
+      // Process only the first paragraph
+      let firstParagraph = paragraphs[0];
+
+      // Define words to be styled differently
+      const styledWords = ["john", "Sophie Okonedo"];
+
+      // Apply different styling to specified words in the first paragraph
+      styledWords.forEach((word) => {
+        // Use a regular expression to find all occurrences of the word
+        const regex = new RegExp(`\\b${word}\\b`, "gi");
+
+        // Replace each occurrence with a span element containing the styled word
+        firstParagraph = firstParagraph.replace(
+          regex,
+          `<span class="styled-word"><b><a href='/'>${word}</a></b></span>`
+        );
+      });
+
+      // Join the paragraphs back together
+      return [firstParagraph, ...paragraphs.slice(1)].join("\n");
+    },
+  },
 
   computed: {
     ...mapGetters(["userData"]),
@@ -52,10 +79,27 @@ export default {
       class="d-flex gap-2"
       :class="{ 'flex-row-reverse': chatMessage.response === true }"
     >
-      <AvatarImg width="36" height="36" :source="chatMessage.avatarSource" />
+      <AvatarImg
+        v-if="chatMessage.response === true"
+        width="36"
+        height="36"
+        :source="chatMessage.avatarSource"
+      />
+      <AvatarImg
+        v-else
+        width="36"
+        height="36"
+        :source="userData ? userData.image : chatMessage.avatarSource"
+      />
       <div class="chat-message-content">
         <div class="chat-message-meta">
           <Text
+            v-if="chatMessage.response === true"
+            class="fw-bolder clr-lighter fs-14"
+            :content="chatMessage.sender"
+          />
+          <Text
+            v-else
             class="fw-bolder clr-lighter fs-14"
             :content="userData ? userData.name : chatMessage.sender"
           />
@@ -72,7 +116,11 @@ export default {
               background: chatMessage.sender === 'Bot' ? '#CEE1FD' : '',
             }"
           >
-            <Paragraph class="fs-16 mb-0" :content="chatMessage.message" />
+            <Paragraph
+              class="fs-16 mb-0"
+              :content="formatMessage(chatMessage.message)"
+              :html="true"
+            />
           </div>
           <div class="d-flex action-btns" v-if="!chatMessage.response === true">
             <CircledIconBtn
@@ -149,5 +197,9 @@ export default {
 }
 .custom-dropdown .dropdown-toggle {
   padding: 0;
+}
+
+.chat-message-wrapper .chat-message p a {
+  text-decoration: none !important;
 }
 </style>
