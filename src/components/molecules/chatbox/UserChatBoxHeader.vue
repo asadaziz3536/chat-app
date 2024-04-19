@@ -75,7 +75,9 @@ export default {
         </span>
         <AvatarImg
           :source="
-            userData ? userData.image : '/src/assets/images/profile-img-2.png'
+            userData
+              ? userData.image
+              : '.../../src/assets/images/profile-img-2.png'
           "
           width="36"
           height="36"
