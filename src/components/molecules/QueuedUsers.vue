@@ -67,5 +67,17 @@ export default {
     />
   </div>
 </template>
-<style>
+<style scoped>
+.user-list-item {
+  position: relative;
+}
+.users-chat-list .queued-users .user-list-item:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 49px;
+  background: #dfe2e8;
+  right: 90px;
+  top: 9px;
+}
 </style>

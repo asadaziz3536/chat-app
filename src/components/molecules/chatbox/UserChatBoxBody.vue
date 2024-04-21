@@ -11,6 +11,7 @@ import ChatMessage from "../ChatMessage.vue";
 import BotImg from "../../../assets/images/Bot.png";
 import profileImg from "../../../assets/images/profile-img-2.png";
 import MyImg from "../../../assets/images/me.png";
+import Thumbnail from "../../../assets/images/thumbnail.png";
 export default {
   components: {
     AvatarImg,
@@ -33,6 +34,7 @@ export default {
       BotImg: BotImg,
       profileImg: profileImg,
       MyImg: MyImg,
+      Thumbnail: Thumbnail,
       // Chat Message Data Array
       chatMessages: [
         {
@@ -69,7 +71,7 @@ export default {
           time: "9:30 AM",
           message: "Hey Sophie! Yes, I got tickets. Super excited! 🎶",
           response: true,
-          fileThumbnail: "../../src/assets/images/thumbnail.png",
+          fileThumbnail: Thumbnail,
         },
         {
           sender: "Sophie Okonedo",
