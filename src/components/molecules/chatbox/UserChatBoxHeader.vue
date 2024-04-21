@@ -30,9 +30,7 @@ export default {
       profileImg: ProfileImg,
       screenWidth: window.innerWidth,
       isSidebarVisible: false,
-
       ProfileImg2: ProfileImg2,
-      BotImg: BotImg,
     };
   },
 
