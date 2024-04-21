@@ -208,6 +208,6 @@ h3 {
   }
   /* Scroll bar design  */
   .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;
   }
 }
