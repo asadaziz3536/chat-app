@@ -206,4 +206,8 @@ h3 {
   .custom-tabs button svg {
     margin-bottom: 0px;
   }
+  /* Scroll bar design  */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
 }
