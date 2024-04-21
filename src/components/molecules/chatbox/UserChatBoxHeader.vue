@@ -32,6 +32,7 @@ export default {
       isSidebarVisible: false,
 
       ProfileImg2: ProfileImg2,
+      BotImg: BotImg,
     };
   },
 
