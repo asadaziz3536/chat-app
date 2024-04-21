@@ -48,10 +48,7 @@ export default {
   methods: {
     // event callback
     onSelectEmoji(emoji) {
-      console.log(emoji.i);
       this.SelectedEmoji = emoji.i;
-      console.log("selected emoji", this.SelectedEmoji);
-      console.log("input reference", this.$refs.textInput.innerHTML);
       this.$refs.textInput.innerHTML += this.SelectedEmoji;
     },
     // Toggle Emoji Picker

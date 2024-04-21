@@ -9,17 +9,14 @@ const store = createStore({
   mutations: {
     // Chat search Query
     setSearchQuery(state, query) {
-      console.log("Setting search query:", query);
       state.searchQuery = query;
     },
     // Chat user data
     setUserData(state, userData) {
-      console.log("user data setting in store", userData);
       state.userData = userData;
     },
     // Toggle Right Sidebar
     toggleSidebar(state) {
-      console.log("toggle sidebar state", state);
       state.isSidebarVisible = !state.isSidebarVisible;
     },
     CloseSidebar(state) {

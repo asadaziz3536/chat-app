@@ -38,7 +38,6 @@ export default {
     normalChatUsersFiltered() {
       // Filter normal chat users based on search query
       const query = this.searchQuery.toLowerCase();
-      console.log("Search query in NormalUser component:", query);
       return this.NormalUsers.filter((user) =>
         user.name.toLowerCase().includes(query)
       );
