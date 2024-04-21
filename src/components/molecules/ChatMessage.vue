@@ -8,7 +8,7 @@ import CircledIconBtn from "../atoms/CircledIconBtn.vue";
 import IconBtn from "../atoms/IconBtn.vue";
 import Paragraph from "../atoms/Paragraph.vue";
 import Text from "../atoms/Text.vue";
-import BotImg from "../../assets/images/Bot.png";
+
 export default {
   data() {
     return {

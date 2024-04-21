@@ -78,8 +78,6 @@ export default {
           actions: ["Share", "More Options", "Add emojis"],
         },
       ],
-
-      BotImg: BotImg,
     };
   },
   // Props section, defining the properties accepted by the component
