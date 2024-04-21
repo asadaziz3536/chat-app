@@ -30,6 +30,8 @@ export default {
       profileImg: ProfileImg,
       screenWidth: window.innerWidth,
       isSidebarVisible: false,
+
+      ProfileImg2: ProfileImg2,
     };
   },
 
@@ -75,11 +77,7 @@ export default {
           </svg>
         </span>
         <AvatarImg
-          :source="
-            userData
-              ? userData.image
-              : '../../src/assets/images/profile-img-2.png'
-          "
+          :source="userData ? userData.image : ProfileImg2"
           width="36"
           height="36"
         />
